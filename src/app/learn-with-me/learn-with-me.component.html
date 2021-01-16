@@ -1,0 +1,26 @@
+<div class="bg-color ">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white text-uppercase border-bottom">
+    <a class="navbar-brand font-hn-bold" [routerLink]="['/home']">Justin joseph <span
+        class="sr-only">(current)</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto  font-hn-light letter-space-1 font-14">
+        <li class="nav-item " data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link p-3 nav-head cursor-pointer" [routerLink]="['/learn-with-me/javaScript']">JavaScript </a>
+        </li>
+        <li class="nav-item " data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link p-3 nav-head cursor-pointer" [routerLink]="['/learn-with-me/angular']">Angular </a>
+        </li>
+        <li class="nav-item " data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link p-3 nav-head cursor-pointer">React </a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

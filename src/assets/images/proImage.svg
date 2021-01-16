@@ -1,0 +1,26 @@
+<svg width="1057" height="600" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="#ffffff" id="canvas_background" height="602" width="1059" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_1" y="105" x="153" stroke-width="0" stroke="#000" fill="#000000">Justin Joseph</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="18" id="svg_2" y="129" x="152" stroke-width="0" stroke="#000" fill="#000000">Software Engineer</text>
+  <text font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_3" y="189" x="150" stroke-width="0" stroke="#000" fill="#000000">Phone</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="18" id="svg_4" y="212" x="154" stroke-width="0" stroke="#000" fill="#000000">+1 (214) 836-3006</text>
+  <text font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_5" y="265" x="152" stroke-width="0" stroke="#000" fill="#000000">Email</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="18" id="svg_6" y="293.5" x="154.44531" stroke-width="0" stroke="#000" fill="#000000">mailtojustinj@gmail.com</text>
+  <text font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_7" y="349" x="153" stroke-width="0" stroke="#000" fill="#000000">Address</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="18" id="svg_8" y="381" x="153" stroke-width="0" stroke="#000" fill="#000000">4418 Warbler LN</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="18" id="svg_9" y="406" x="152" stroke-width="0" stroke="#000" fill="#000000">Garland, TX 75043</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="18" id="svg_10" y="432" x="152" stroke-width="0" stroke="#000" fill="#000000">USA</text>
+  <text font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_11" y="481" x="150" stroke-width="0" stroke="#000" fill="#000000">Date of Birth</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="18" id="svg_12" y="513" x="152" stroke-width="0" stroke="#000" fill="#000000">Aug 05th, 1993</text>
+ </g>
+</svg>

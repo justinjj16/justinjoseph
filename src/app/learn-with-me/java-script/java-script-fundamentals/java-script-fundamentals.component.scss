@@ -1,0 +1,14 @@
+.tag{
+  color: #905;
+}
+.punctuation{
+  color: #999;
+}
+.attr-name{
+  color: #690;
+}
+.to-scrool{
+  overflow-y: auto;
+  max-height: calc(100vh - 75px);
+    min-height: calc(100vh - 75px);
+}

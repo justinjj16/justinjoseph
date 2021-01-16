@@ -1,0 +1,94 @@
+.countactUsImgDv{
+  background: #4f5e7b url(/../assets/images/bgImg.JPG) right no-repeat;
+  background-size: cover !important;
+  background-blend-mode: soft-light !important;
+  background-position: top center !important;
+  background-attachment: fixed !important;
+
+  .contactUs-content{
+    // width: 50%;
+    // margin: auto;
+    .contactUsFomDv{
+      .contactUsHead{
+
+      }
+      .contact-form-dv{
+        form{
+          input{
+            height: 35px;
+          }
+          textarea{
+            height: 150px;
+            resize: none;
+          }
+          .contactUsBtndv{
+            
+            button{
+              height: 35px;
+              width: 100%;
+              border-radius: 15px !important;
+              background-color: #854dff;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .contact-info{
+      .contact-info-phone{
+        border-right: 1px solid #854dff;
+        border-left: 1px solid #854dff;
+      }
+    }
+  }
+}
+.footer{
+  background-color: #082050;
+  .footerprodectdesign{
+    span{
+      color:#854DFF ;
+    }
+  }
+}
+
+/*---------------------RESPONSIVE---------------------------*/
+ /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .contactUs-content{
+    width: 100%;
+    margin: auto;
+  }
+}
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .contactUs-content{
+    width: 100%;
+    margin: auto;
+  }
+}
+
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
+  .contactUs-content{
+    width: 75%;
+    margin: auto;
+  }
+ }
+
+
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+  .contactUs-content{
+    width: 75%;
+    margin: auto;
+  }
+ 
+ }
+
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+  .contactUs-content{
+    width: 50%;
+    margin: auto;
+  }
+ }

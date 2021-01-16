@@ -1,0 +1,69 @@
+<div class="countactUs mt-5">
+  <div class="countactUsImgDv">
+    <div class="contactUs-content py-4">
+      <div class="pt-5">
+        <h3 class="font-hn-bold color-white-text text-center">To know more about Justin Joseph</h3>
+      </div>
+      <div class="contactUsFomDv pt-3">
+        <div class="contactUsHead">
+        </div>
+        <div class="contact-form-dv">
+          <form autocomplete="off" id="submit-form" [formGroup]="contactmeForm" (submit)="contactme($event)">
+            <div class="row mx-0">
+              <div class="form-group col-md-6">
+                <input autocomplete="xczxczxdsfsfds" placeholder="Name..." formControlName='name' type="text"
+                  class="form-control font-hn-medium" id="contactName" aria-describedby="nameHelp" name="name">
+              </div>
+              <div class="form-group col-md-6">
+                <input formControlName='email' placeholder="Email..." type="email" class="form-control font-hn-medium"
+                  id="contactEmail" aria-describedby="emailHelp" name="email">
+              </div>
+            </div>
+            <div class="row mx-0">
+              <div class="form-group col-12">
+                <textarea formControlName='message' name="message" placeholder="Type your message here..." type="text"
+                  class="form-control font-hn-medium" id="contactMessage" aria-describedby="messageHelp"></textarea>
+              </div>
+            </div>
+            <div class="w-75 m-auto contactUsBtndv">
+              <button type="submit" class="btn font-hn-bold">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="contact-info my-5">
+        <div class="row mx-0">
+          <div class="col-md-4 d-flex justify-content-center py-1 m-auto">
+            <span class="color-white-text font-lato-regular">mailtojustinj@gmail.com</span>
+          </div>
+          <div class="col-md-4 d-flex justify-content-center py-1 contact-info-phone m-auto">
+            <span class="color-white-text font-lato-regular">Tel : +91 9633948375</span>
+          </div>
+          <div class="col-md-4 ">
+            <span class="color-white-text d-flex justify-content-center pt-1 font-lato-regular">
+              Bethel
+            </span>
+            <span class="color-white-text d-flex justify-content-center py-1 font-lato-regular">
+              Chanthupoor, Vencode </span>
+            <span class="color-white-text d-flex justify-content-center pt-1 font-lato-regular">
+              TVM, Kerela
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dowload-resume d-flex justify-content-center">
+      <a download="justin's_Resume" target="_blank" href="../../../../assets/Resume/resume.pdf"
+        class="btn text-white btn-outline-success">Click to download Resume</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footerprodectdesign d-flex justify-content-center pt-1">
+      <!-- <span class="font-lato-regular">© 2020 by Analytix. Proudly created with Justin's Technologies</span> -->
+    </div>
+  </div>
+  <script>
+
+  </script>
+</div>

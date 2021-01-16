@@ -1,0 +1,65 @@
+<div class="bg-color">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white text-uppercase">
+        <a class="navbar-brand font-hn-bold" (click)='navigate(profile)'>Justin joseph <span
+                class="sr-only">(current)</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto  font-hn-light letter-space-1 font-14">
+                <li class="nav-item " data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a (click)="navigate(experience)" class="nav-link p-3 nav-head cursor-pointer">Experience </a>
+                </li>
+                <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a (click)="navigate(education)" class="nav-link p-3 nav-head cursor-pointer">education</a>
+                </li>
+                <!-- <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a class="nav-link p-3 nav-head cursor-pointer">clients</a>
+                </li> -->
+                <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a (click)="navigate(skills)" class="nav-link p-3 nav-head cursor-pointer">skills</a>
+                </li>
+                <!-- <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a class="nav-link p-3 nav-head cursor-pointer">experties</a>
+                </li>-->
+                <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a (click)="navigate(contact)" class="nav-link p-3 nav-head cursor-pointer">contact</a>
+                </li>
+                <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a [routerLink]="['/learn-with-me']" class="nav-link p-3 nav-head cursor-pointer">Learn with me</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div #profile>
+        <app-profile></app-profile>
+    </div>
+    <!-- <div>
+        <app-social></app-social>
+    </div> -->
+
+    <div #experience class="py-5">
+        <app-experience></app-experience>
+    </div>
+
+    <div #education class="py-5">
+        <app-education></app-education>
+    </div>
+    <div #skills class="py-5">
+        <app-skills></app-skills>
+    </div>
+    <!-- <div >
+        <app-clients></app-clients>
+    </div>
+
+    <div>
+        <app-experties></app-experties>
+    </div>-->
+    <div #contact class="pt-5">
+        <app-contact></app-contact>
+    </div>
+
+</div>
