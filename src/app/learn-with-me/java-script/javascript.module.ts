@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MarkdownModule } from 'ngx-markdown';
 import { JavaScriptRoutingModule } from './javascript.routing';
 import { JavaScriptComponent } from './java-script.component';
 import { JavaScriptIntroductionComponent } from './java-script-introduction/java-script-introduction.component';
@@ -21,7 +22,8 @@ import { JavaScriptModulesComponent } from './java-script-modules/java-script-mo
   ],
   imports: [
     CommonModule,
-    JavaScriptRoutingModule
+    JavaScriptRoutingModule,
+    MarkdownModule.forRoot()
   ],
 })
 export class JavaScriptModule { }

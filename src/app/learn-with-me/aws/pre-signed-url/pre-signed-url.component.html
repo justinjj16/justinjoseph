@@ -1,0 +1,137 @@
+<div class="presignedurl">
+  <div style="height: 400px;" class="w-50 m-auto">
+    <img class="w-100 h-100" src="../../../../assets/images/presignedUrl.png" alt="" />
+  </div>
+  <div class="w-75 m-auto">
+    <div class="d-flex justify-content-center">
+      <h3>File Uploads Directly to S3 From the Browser</h3>
+    </div>
+    <div>
+      <p>Uploading files to S3 directly from the browser is a great way to increase performance by removing the need to
+        process and then re-upload files from your own server.</p>
+    </div>
+    <div>
+      <h2>Overview</h2>
+    </div>
+    <div>
+      <p>
+        A traditional approach to file uploading would typically involve the client making a PUT request to an endpoint
+        on your API server. Your API server would then be responsible for processing the handling of the transfer of the
+        file itself, and any subsequent processing you might want to perform (image resizing/thumbnail generation etc).
+      </p>
+    </div>
+    <div>
+      <p>
+        There's certainly nothing wrong with this approach, however these days many people opt to use third party
+        storage solutions, like S3, to avoid having to implement a scalable storage solution of their own. Great, right?
+        This now means your API server has to transfer the file(s) to S3 and incur additional resource costs.
+      </p>
+    </div>
+    <div>
+      <p>
+        What if you could avoid these resource costs, think RAM, CPU, bandwidth in and out, etc by having your client
+        upload directly to S3? Enter pre-signed PUT requests!
+      </p>
+    </div>
+    <div>
+      <p>
+        Pre-signed PUT requests allow the client to upload directly to S3, bypassing your server entirely. Your API
+        server is only tasked with generating the pre-signed PUT request and providing it to the client, no file
+        handling at all! As you can imagine, this frees up significant resources which can then be utilized for handling
+        additional API requests.
+      </p>
+    </div>
+    <div>
+      <p>
+        You might be wondering how we can perform any additional processes, like thumbnail generation for example, if we
+        never actually get our hands on the file. This is where lambda functions come in handy!
+      </p>
+    </div>
+    <div>
+      <p>
+        Although outside the scope of this particular put, I will look to address put upload processing with lambda
+        functions in a future put!
+      </p>
+    </div>
+    <div>
+      <h2>Process summary</h2>
+    </div>
+    <div>
+      <ul>
+        <li>
+          The client makes a request to an endpoint which responds with a URL and pre-signed put data.
+        </li>
+        <li>
+          The client then uses the provided URL and pre-signed PUT data to form a request containing the file to be
+          uploaded directly to S3.
+        </li>
+      </ul>
+    </div>
+    <div>
+      <p>Now that we've gone over the benefits of utilizing pre-signed PUT requests over the traditional approach,
+        let's dive in further and take a look at how to implement them!</p>
+    </div>
+    <div>
+      <h2>S3 bucket CORS</h2>
+    </div>
+    <div>
+      <p>
+        Assuming you already have an S3 bucket you'd like to upload your files to, the next step is to modify the
+        bucket's CORS configuration to allow PUT requests.
+      </p>
+    </div>
+    <div class="d-flex justify-content-center">
+      <markdown class="variable-binding" [data]="crossorgin"></markdown>
+    </div>
+    <div>
+      <p>Once that's done it's time to create our pre-signed PUT request!</p>
+    </div>
+    <div>
+      <h2>Creating the pre-signed PUT request</h2>
+    </div>
+    <div>
+      <p>
+        An endpoint on your server that's accessible to the client would contain code similar to the following:
+      </p>
+    </div>
+    <div class="d-flex justify-content-center">
+      <markdown class="variable-binding" [data]="presignedUrlCode"></markdown>
+    </div>
+    <div>
+      <p>
+        Specific conditions may be specified to add validation to the request. In this case, we verify that the file
+        size is less than 100000000 bytes and that the content-type of the file begins with 'image/'.
+      </p>
+    </div>
+    <div>
+      <p>
+        It's also worth noting that additional custom meta information can be specified. Here we specify the user id of
+        the person uploading the file which would be useful in put upload processing when we need to associate the file
+        with the uploader.
+      </p>
+    </div>
+    <div>
+      <p>The result of getSignedUrl would look something like the following:</p>
+    </div>
+    <div class="d-flex justify-content-center">
+      <markdown class="variable-binding overflow-auto" [data]="presignedUrlexample"></markdown>
+    </div>
+    <div>
+      <h2>Uploading the file to S3</h2>
+    </div>
+    <div>
+      <p>
+        Once we've written the code to create a pre-signed PUT request, it's time to create the request itself and
+        upload the file to S3!
+      </p>
+    </div>
+    <div class="d-flex justify-content-center">
+      <markdown class="variable-binding" [data]="presignedUrlPutRequest"></markdown>
+    </div>
+    <div>
+      <p>
+        <span class="font-weight-bold">note:</span> the file must be the full file not FormData.
+      </p>
+    </div>
+  </div>
+</div>

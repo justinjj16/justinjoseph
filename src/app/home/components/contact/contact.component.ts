@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
-import * as $ from 'jquery';
-import {environment} from '../../../../environments/environment.prod';
+import * as $ from 'jquery'
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -25,7 +24,7 @@ export class ContactComponent implements OnInit {
     if (this.contactmeForm.valid) {
       e.preventDefault()
       $.ajax({
-        url: environment.apiUrl,
+        url: "https://script.google.com/macros/s/AKfycbxnEfk16ttETbOa4i4_bfNxGbK8jpenQoROC07znA/exec",
         data: $("#submit-form").serialize(),
         method: "post",
         success: function (response) {
@@ -51,3 +50,4 @@ export class ContactComponent implements OnInit {
 
   }
 }
+//https://script.google.com/macros/s/AKfycbxnEfk16ttETbOa4i4_bfNxGbK8jpenQoROC07znA/exec

@@ -1,37 +1,31 @@
 <div>
   <div class="row mx-0">
     <div class="col-md-2 d-none d-md-block">
-      <div class="py-2">
-        <h6>Hello, Justin !</h6>
+      <div class="py-2 cursor-pointer">
+        <h6 (click)='navigate(hellojustin)'>Hello, Justin !</h6>
       </div>
-      <div class="py-2">
+      <div class="py-2 cursor-pointer" (click)='navigate(comments)'>
         <h6>Comments</h6>
       </div>
-      <div class="py-2">
+      <div class="py-2 cursor-pointer" (click)='navigate(variable)'>
         <h6>Variables</h6>
       </div>
-      <div class="py-2">
+      <div class="py-2 cursor-pointer" (click)='navigate(datatype)'>
         <h6>DataTypes</h6>
       </div>
-      <div class="py-2">
+      <div class="py-2 cursor-pointer" (click)='navigate(basicoperator)'>
         <h6>Basic operators, maths</h6>
       </div>
-      <div class="py-2">
+      <div class="py-2 cursor-pointer" (click)='navigate(comparisons)'>
         <h6>Comparisons</h6>
       </div>
-      <div class="py-2">
-        <h6>Basic operators, maths</h6>
-      </div>
-      <div class="py-2">
-        <h6>Comparisons</h6>
-      </div>
-      <div class="py-2">
+      <div class="py-2 cursor-pointer" (click)='navigate(conditional)'>
         <h6>Conditional</h6>
       </div>
     </div>
     <div class="col-md-10 to-scrool">
       <div class="">
-        <div class="py-2">
+        <div class="py-2" #hellojustin>
           <h4 class="py-2">Hello, Justin !</h4>
           <div class="py-2">This part of the tutorial is about core JavaScript, the language itself.
             JavaScript programs can be inserted into any part of an HTML document with the help of the
@@ -39,83 +33,51 @@
           <div>How to Tag javascript in HTML page</div>
           <div>Create a .html file and create a sample.js file</div>
 
+          <markdown class="variable-binding px-5 py-3" [data]="markdown"></markdown>
 
 
-          <div class="code-display px-5 py-3">
-
-            <div class="">{{getClassByValue('html')}}</div>
-            <div class="pl-3">{{getClassByValue('head')}}</div>
-            <div class="d-flex pl-5">
-              <span>{{getClassByValue('title')}}learn with me</span>
-              <span>{{getClassByValue('/title')}}</span>
-            </div>
-            <div class="pl-3">{{getClassByValue('/head')}}</div>
-            <div class="pl-3">{{getClassByValue('body')}}</div>
-            <div class="d-flex pl-5">
-              <span>{{getClassByValue('h1')}}</span>Hi Justin <span>
-                {{getClassByValue('/h1')}}</span>
-            </div>
-            <div class="pl-3">{{getClassByValue('/body')}}</div>
-            <div class="">{{getClassByValue('/html')}}</div>
-          </div>
           <div class="">
             you can check javascript was connected
-            <div class="code-display px-5 py-3">
-              console.log('Hi Justin');
-            </div>
+
+            <markdown class="variable-binding px-5 py-3" [data]="consoleJustin"></markdown>
           </div>
         </div>
 
-        <div class="py-2">
+        <div class="py-2" #comments>
           <h4 class="py-2">Comments</h4>
           <div class="py-2">1)One-line comments start with two forward slash characters //</div>
-          <div class="code-display px-5 py-3">
-            // This comment occupies a line of its own
-            alert('Hello');
-
-            alert('World'); // This comment follows the statement
-          </div>
+          <markdown class="variable-binding px-5 py-3" [data]="inlineConnent"></markdown>
           <div class="py-2">2)Multiline comments start with a forward slash and an asterisk /* and end with an asterisk
             and a forward slash */.</div>
-          <div class="code-display px-5 py-3">
-            /* An example with two messages.
-            This is a multiline comment.
-            */
-            alert('Hello');
-            alert('World');
-          </div>
+          <markdown class="variable-binding px-5 py-3" [data]="multipleComment"></markdown>
         </div>
 
 
 
 
-        <div class="py-2">
+        <div class="py-2" #variable>
           <h4 class="py-2">Variables</h4>
           <div>1) let
             Variables are used to store this information.To create a variable in JavaScript, use the let keyword.
             The statement below creates (in other words: declares) a variable with the name “message”:</div>
-          <div class="code-display px-5 py-3">let message;</div>
+          <markdown class="variable-binding" [data]="letMessage"></markdown>
           <div class="">
             Now, we can put some data into it by using the assignment operator =:
           </div>
-          <div class="code-display px-5 py-3">let message;
-
-            message = 'Hello'; // store the string</div>
+          <markdown class="variable-binding" [data]="letmessageHellow"></markdown>
           <div class="">
             The string is now saved into the memory area associated with the variable. We can access it using the
             variable name:
           </div>
-          <div class="code-display px-5 py-3">let message;
-            message = 'Hello!';
-
-            alert(message); // shows the variable content</div>
+          <markdown class="variable-binding" [data]="letmessageHelloComment"></markdown>
           <div>In older scripts, you may also find another keyword: var instead of let</div>
-          <div class="code-display px-5 py-3">var message = 'Hello';</div>
+          <markdown class="variable-binding" [data]="varmessage"></markdown>
           <div>
             2) const
           </div>
           <div>To declare a constant (unchanging) variable, use const instead of let</div>
-          <div class="code-display px-5 py-3">const myBirthday = '18.04.1982';</div>
+          <markdown class="variable-binding" [data]="constBirthday"></markdown>
+
           <div>We can declare variables to store data by using the var, let, or const keywords.</div>
           <div>let – is a modern variable declaration.</div>
           <div>var – is an old-school variable declaration. Normally we don’t use it at all, but we’ll cover subtle
@@ -127,7 +89,7 @@
 
 
 
-        <div class="py-2">
+        <div class="py-2" #datatype>
           <h4 class="py-2">Data Type</h4>
           <div>A value in JavaScript is always of a certain type. For example, a string or a number.</div>
           <div>There are 8 basic data types in JavaScript.</div>
@@ -142,21 +104,19 @@
           <div>8) symbol for unique identifiers.</div>
 
           <div>1) number </div>
-          <div class="code-display px-5 py-3">let n = 123;</div>
+          <markdown class="variable-binding" [data]="letN"></markdown>
           <div>2)bigint</div>
-          <div class="code-display px-5 py-3">// the "n" at the end means it's a BigInt
-            const bigInt = 1234567890123456789012345678901234567890n;
-          </div>
+          <markdown class="variable-binding" [data]="bigInt"></markdown>
           <div>3) string</div>
-          <div class="code-display px-5 py-3">let name = "justin"</div>
+          <markdown class="variable-binding" [data]="strings"></markdown>
           <div>4) boolean</div>
-          <div class="code-display px-5 py-3">let flag = true</div>
+          <markdown class="variable-binding" [data]="booleam"></markdown>
           <div>5)null</div>
-          <div class="code-display px-5 py-3">let age = null;</div>
+          <markdown class="variable-binding" [data]="nullValeu"></markdown>
           <div>6) undefined</div>
-          <div class="code-display px-5 py-3">let age = undefined;</div>
+          <markdown class="variable-binding" [data]="undifined"></markdown>
           <div>7) object</div>
-          <div class="code-display px-5 py-3">let obj = {{ "{name:'justin',age:27}" }}</div>
+          <markdown class="variable-binding" [data]="objectvalue"></markdown>
           <div>8) symbol</div>
           <div>The symbol type is used to create unique identifiers for objects. We have to mention it here for the sake
             of completeness, but also postpone the details till we know objects.</div>
@@ -171,7 +131,7 @@
 
 
 
-        <div class="py-2">
+        <div class="py-2" #basicoperator>
           <h4 class="py-2">Basic operators, maths</h4>
           <div>The following math operations are supported:</div>
           <div>1)Addition +,</div>
@@ -182,52 +142,23 @@
           <div>6)Exponentiation **.</div>
 
           <div class="pt-3">1)Addition +</div>
-          <div class="code-display px-5 py-3">let x = 3;
-            let y = 4;
-
-            let z = x + y;</div>
+          <markdown class="variable-binding" [data]="adding"></markdown>
           <div>2)Subtraction -,</div>
-          <div class="code-display px-5 py-3">
-            let x = 3;
-            let y = 4;
-
-            let z = x - y;
-          </div>
+          <markdown class="variable-binding" [data]="subscraction"></markdown>
           <div>3)Multiplication *,</div>
-          <div class="code-display px-5 py-3">
-            let x = 3;
-            let y = 4;
-
-            let z = x * y;
-          </div>
-
+          <markdown class="variable-binding" [data]="multilipication"></markdown>
           <div>4)Division /,</div>
-          <div class="code-display px-5 py-3">
-            let x = 10;
-            let y = 2;
-
-            let z = x / y;
-          </div>
+          <markdown class="variable-binding" [data]="division"></markdown>
           <div>5)Remainder %,</div>
-          <div class="code-display px-5 py-3">
-            let x = 10;
-            let y = 3;
-
-            let z = x % y;
-          </div>
+          <markdown class="variable-binding" [data]="reminder"></markdown>
           <div>6)Exponentiation **.</div>
-          <div class="code-display px-5 py-3">
-            let x = 2;
-            let y = 4;
-
-            let z = x ** y;
-          </div>
+          <markdown class="variable-binding" [data]="expolantion"></markdown>
         </div>
 
 
 
 
-        <div class="py-2">
+        <div class="py-2" #comparisons>
           <h4>Comparisons</h4>
           <div> In JavaScript they are written like this: </div>
           <div>{{getText('first')}}</div>
@@ -244,11 +175,7 @@
           <div>true – means “yes”, “correct” or “the truth”.</div>
           <div>false – means “no”, “wrong” or “not the truth”.</div>
           <div>For example:</div>
-          <div class="code-display px-5 py-3">
-            alert( 2 > 1 ); // true (correct)
-            alert( 2 == 1 ); // false (wrong)
-            alert( 2 != 1 ); // true (correct)
-          </div>
+          <markdown class="variable-binding" [data]="comparisonsEg1"></markdown>
           <div>
             <h6>String comparison</h6>
           </div>
@@ -256,19 +183,12 @@
             “lexicographical” order.</div>
           <div>In other words, strings are compared letter-by-letter.</div>
           <div>For example:</div>
-          <div class="code-display px-5 py-3">
-            alert( 'Z' > 'A' ); // true
-            alert( 'Glow' > 'Glee' ); // true
-            alert( 'Bee' > 'Be' ); // true
-          </div>
+          <markdown class="variable-binding" [data]="comparisonsEg2"></markdown>
           <div>
             <h6>Strict equality</h6>
           </div>
           <div>A regular equality check == has a problem. It cannot differentiate 0 from false:</div>
-          <div class="code-display px-5 py-3">
-            alert( 0 == false ); // true
-            alert( '' == false ); // true
-          </div>
+          <markdown class="variable-binding" [data]="comparisonsEg3"></markdown>
           <div>
             <h6>Comparison with null and undefined</h6>
           </div>
@@ -276,12 +196,12 @@
           <div>For a strict equality check ===</div>
           <div>These values are different, because each of them is a different type.
           </div>
-          <div class="code-display px-5 py-3">alert( null === undefined ); // false</div>
+          <markdown class="variable-binding" [data]="comparisonsEg4"></markdown>
         </div>
 
 
 
-        <div class="py-2">
+        <div class="py-2" #conditional>
           <h4>Conditional</h4>
           <div>Sometimes, we need to perform different actions based on different conditions</div>
           <div>To do that, we can use the if statement and the conditional operator ?, that’s also called a “question
@@ -291,10 +211,7 @@
             <h6>The “if” statement</h6>
           </div>
           <div>For example:</div>
-          <div class="code-display px-5 py-3">if (year == 2015) {{"{
-        alert( 'That's correct!'' );
-        alert( 'You're so smart!' );
-        }"}}</div>
+          <markdown class="variable-binding" [data]="conditional"></markdown>
         </div>
 
 

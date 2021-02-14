@@ -34,6 +34,10 @@ const routes: Routes = [
       {
         path: 'angular',
         loadChildren: () => import('./angular/angular.module').then(mod => mod.AngularModule),
+      },
+      {
+        path: 'aws',
+        loadChildren: () => import('./aws/aws.module').then(mod => mod.AWSModule),
       }
     ]
   }
