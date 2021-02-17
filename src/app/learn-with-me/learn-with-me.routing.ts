@@ -1,27 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LearnWithMeComponent } from './learn-with-me.component';
-// const routes: Routes = [
-//   {
-//     path: '',
-//     component: LearnWithMeComponent,
-//     children: [
-//       {
-//         path: 'javaScript',
-//         loadChildren: () => import('./java-script/javascript.module').then(mod => mod.JavaScriptModule),
-//       },
-//       {
-//         path: 'angular',
-//         loadChildren: () => import('./angular/angular.module').then(mod => mod.AngularModule)
-//       }
-//     ]
-//   }
-// ];
+import { LearnWithMeContainerComponent } from './container/learn-with-me-container/learn-with-me-container.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'learn-with-me',
+    redirectTo: '',
     pathMatch: 'full',
+    component:LearnWithMeContainerComponent
   },
   {
     path: '',

@@ -1,0 +1,44 @@
+<div class="bg-color ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white text-uppercase border-bottom">
+        <a class="navbar-brand font-hn-bold" [routerLink]="['/home']">Justin joseph <span
+                class="sr-only">(current)</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto  font-hn-light letter-space-1 font-14">
+                <li class="nav-item " data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a class="nav-link p-3 nav-head cursor-pointer"
+                        [routerLink]="['/learn-with-me/javaScript']">JavaScript </a>
+                </li>
+                <li class="nav-item disabled" data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a class="nav-link p-3 nav-head cursor-pointer disabled"
+                        [routerLink]="['/learn-with-me/angular']">Angular </a>
+                </li>
+                <li class="nav-item " data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a class="nav-link p-3 nav-head cursor-pointer">React </a>
+                </li>
+                <li class="nav-item " data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a class="nav-link p-3 nav-head cursor-pointer" [routerLink]="['/learn-with-me/aws']">AWS </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <div class="row mx-0">
+        <div class="col-md-6 py-4 javaScript d-flex justify-content-center">
+            <img [routerLink]="['/learn-with-me/javaScript']" class="border img-fluid w-75 cursor-pointer" src="assets/images/javascript-ar21.svg">
+        </div>
+        <div class="col-md-6 py-4 angular d-flex justify-content-center">
+            <img class="border img-fluid w-75 cursor-pointer" src="assets/images/angular-ar21.svg">
+        </div>
+        <div class="col-md-6 py-4 react d-flex justify-content-center ">
+            <img class="border img-fluid w-75 cursor-pointer" src="assets/images/reactjs-ar21.svg">
+        </div>
+        <div class="col-md-6 py-4 aws d-flex justify-content-center">
+            <img [routerLink]="['/learn-with-me/aws']" class="border img-fluid w-75 cursor-pointer" src="assets/images/amazon_aws-ar21.svg">
+        </div>
+    </div>
+</div>

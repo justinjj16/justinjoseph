@@ -31,6 +31,6 @@ export class ProfileComponent implements OnInit {
     window.open("https://www.npmjs.com/~justinjj16", "_blank");
   }
   stackoverFlow() {
-    window.open("https://stackoverflow.com/users/13378680/justin-j", "_blank")
+    window.open("https://stackoverflow.com/story/justinjj08", "_blank")
   }
 }
