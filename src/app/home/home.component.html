@@ -9,21 +9,16 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto  font-hn-light letter-space-1 font-14">
+                <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a (click)="navigate(skills)" class="nav-link p-3 nav-head cursor-pointer">skills</a>
+                </li>
                 <li class="nav-item " data-toggle="collapse" data-target=".navbar-collapse.show">
                     <a (click)="navigate(experience)" class="nav-link p-3 nav-head cursor-pointer">Experience </a>
                 </li>
                 <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                     <a (click)="navigate(education)" class="nav-link p-3 nav-head cursor-pointer">education</a>
                 </li>
-                <!-- <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                    <a class="nav-link p-3 nav-head cursor-pointer">clients</a>
-                </li> -->
-                <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                    <a (click)="navigate(skills)" class="nav-link p-3 nav-head cursor-pointer">skills</a>
-                </li>
-                <!-- <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                    <a class="nav-link p-3 nav-head cursor-pointer">experties</a>
-                </li>-->
+
                 <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                     <a (click)="navigate(contact)" class="nav-link p-3 nav-head cursor-pointer">contact</a>
                 </li>
@@ -40,17 +35,17 @@
     <!-- <div>
         <app-social></app-social>
     </div> -->
-
+    <div #skills class="">
+        <app-skills></app-skills>
+    </div>
     <div #experience class="py-5">
         <app-experience></app-experience>
     </div>
 
-    <div #education class="py-5">
+    <div #education class="py-5" style="background-color: #f3f5f2;">
         <app-education></app-education>
     </div>
-    <div #skills class="py-5">
-        <app-skills></app-skills>
-    </div>
+
     <!-- <div >
         <app-clients></app-clients>
     </div>
@@ -58,7 +53,7 @@
     <div>
         <app-experties></app-experties>
     </div>-->
-    <div #contact class="pt-5">
+    <div #contact class="">
         <app-contact></app-contact>
     </div>
 
